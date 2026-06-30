@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHK Cakal — Heizung, Sanitär & Klima in Salzgitter | Meisterbetrieb</title>
+<meta name="description" content="SHK Cakal ist Ihr Meisterbetrieb für Heizung, Sanitär & Klima in Salzgitter und Umgebung. Wärmepumpen, Badsanierung, Klimaanlagen, Heizungswartung — persönlich, regional, zuverlässig.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B1220',
+          ink2: '#101a2c',
+          ember: '#FF6A2B',
+          ember2: '#FFA552',
+          frost: '#5FD3D3',
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['Manrope', 'sans-serif'],
+        },
+        boxShadow: {
+          glow: '0 0 0 1px rgba(255,255,255,0.06), 0 20px 60px -20px rgba(255,106,43,0.35)',
+        },
+      },
+    },
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-ink text-slate-100 font-sans antialiased selection:bg-ember selection:text-white">
+
+<!-- ====== NAV ====== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between h-20">
+      <a href="#top" class="flex items-center gap-3 group">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-ember to-ember2 shadow-glow">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C12 2 6 9.5 6 14.5C6 17.8137 8.68629 20.5 12 20.5C15.3137 20.5 18 17.8137 18 14.5C18 9.5 12 2 12 2Z" stroke="white" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M12 17.5C13.3807 17.5 14.5 16.3807 14.5 15C14.5 13.5 12 10.5 12 10.5C12 10.5 9.5 13.5 9.5 15C9.5 16.3807 10.6193 17.5 12 17.5Z" fill="white"/>
+          </svg>
+        </span>
+        <span class="font-display font-extrabold text-lg tracking-tight text-white">SHK <span class="text-ember2">Cakal</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-slate-300">
+        <a href="#leistungen" class="hover:text-white transition-colors">Leistungen</a>
+        <a href="#warum-wir" class="hover:text-white transition-colors">Über uns</a>
+        <a href="#ablauf" class="hover:text-white transition-colors">Ablauf</a>
+        <a href="#kontakt" class="hover:text-white transition-colors">Kontakt</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+4917621986283" class="flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-white transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.4 16.1 21.4 16.7V20.3C21.4 20.9 20.9 21.4 20.3 21.4C10.4 21.4 2.6 13.6 2.6 3.7C2.6 3.1 3.1 2.6 3.7 2.6H7.3C7.9 2.6 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          0176 21986283
+        </a>
+        <a href="#kontakt" class="rounded-full bg-white text-ink px-5 py-2.5 text-sm font-bold hover:bg-ember2 hover:text-white transition-all duration-300">
+          Beratung anfragen
+        </a>
+      </div>
+
+      <button id="menu-btn" aria-label="Menü öffnen" class="lg:hidden flex flex-col gap-1.5 p-2">
+        <span class="block h-0.5 w-6 bg-white"></span>
+        <span class="block h-0.5 w-6 bg-white"></span>
+        <span class="block h-0.5 w-4 bg-white ml-auto"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-ink2/98 backdrop-blur border-t border-white/10">
+    <nav class="flex flex-col px-6 py-6 gap-5 text-base font-medium">
+      <a href="#leistungen" class="mobile-link">Leistungen</a>
+      <a href="#warum-wir" class="mobile-link">Über uns</a>
+      <a href="#ablauf" class="mobile-link">Ablauf</a>
+      <a href="#kontakt" class="mobile-link">Kontakt</a>
+      <a href="tel:+4917621986283" class="mobile-link text-ember2">0176 21986283</a>
+      <a href="#kontakt" class="mt-2 text-center rounded-full bg-ember px-5 py-3 font-bold text-white">Beratung anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section id="top" class="relative overflow-hidden pt-40 pb-28 lg:pt-52 lg:pb-36">
+  <div class="hero-grid absolute inset-0"></div>
+  <div class="absolute -top-40 -right-40 w-[36rem] h-[36rem] rounded-full bg-ember/20 blur-[120px]"></div>
+  <div class="absolute top-1/2 -left-32 w-[28rem] h-[28rem] rounded-full bg-frost/10 blur-[120px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-3xl reveal">
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-ember2 uppercase">
+        <span class="h-1.5 w-1.5 rounded-full bg-ember2 animate-pulse"></span>
+        Meisterbetrieb · Salzgitter
+      </span>
+
+      <h1 class="mt-7 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-white">
+        Heizung. Sanitär. Klima.
+        <span class="block bg-gradient-to-r from-ember2 via-ember to-amber-400 bg-clip-text text-transparent">
+          Handwerk auf Meisterniveau.
+        </span>
+      </h1>
+
+      <p class="mt-7 text-lg lg:text-xl text-slate-300 leading-relaxed max-w-xl">
+        Planung, Einbau &amp; Wartung vom Fachbetrieb. <span class="text-white font-medium">Persönlich. Regional. Zuverlässig.</span>
+        SHK Cakal betreut Privat- und Gewerbekunden in Salzgitter und Umgebung.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#kontakt" class="group inline-flex items-center justify-center gap-2 rounded-full bg-ember px-8 py-4 font-bold text-white shadow-glow hover:bg-ember2 transition-all duration-300 hover:-translate-y-0.5">
+          Kostenlos beraten lassen
+          <svg class="transition-transform group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#leistungen" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 font-semibold text-slate-200 hover:bg-white/5 hover:border-white/40 transition-all duration-300">
+          Leistungen ansehen
+        </a>
+      </div>
+
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
+        <div>
+          <div class="font-display font-extrabold text-2xl text-white">Meister</div>
+          <div class="text-sm text-slate-400 mt-1">geprüfte Qualität</div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-2xl text-white">100%</div>
+          <div class="text-sm text-slate-400 mt-1">regional verwurzelt</div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-2xl text-white">Persönlich</div>
+          <div class="text-sm text-slate-400 mt-1">vom Erstgespräch bis Wartung</div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-2xl text-white">Schnell</div>
+          <div class="text-sm text-slate-400 mt-1">kurze Reaktionszeiten</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== LOGOS / TRUST BAR ====== -->
+<section class="border-y border-white/10 bg-ink2/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-7 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm font-semibold text-slate-400 uppercase tracking-wide">
+    <span class="flex items-center gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#FFA552" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Meisterbetrieb</span>
+    <span class="flex items-center gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#FFA552" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Wärmepumpen-Spezialist</span>
+    <span class="flex items-center gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#FFA552" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Festpreise nach Aufmaß</span>
+    <span class="flex items-center gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#FFA552" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Salzgitter &amp; Umgebung</span>
+  </div>
+</section>
+
+<!-- ====== LEISTUNGEN ====== -->
+<section id="leistungen" class="py-28 lg:py-36">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl reveal">
+      <span class="text-ember2 font-bold text-sm uppercase tracking-widest">Leistungen</span>
+      <h2 class="mt-4 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+        Alles aus einer Hand —<br class="hidden sm:block"> Heizung, Bad &amp; Klima.
+      </h2>
+      <p class="mt-5 text-slate-400 text-lg">
+        Von der ersten Beratung über die Planung bis zur Wartung: SHK Cakal begleitet Ihr Projekt zuverlässig durch alle Phasen.
+      </p>
+    </div>
+
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="service-card reveal">
+        <div class="icon-tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 6 9.5 6 14.5C6 17.8137 8.68629 20.5 12 20.5C15.3137 20.5 18 17.8137 18 14.5C18 9.5 12 2 12 2Z" stroke="#FFA552" stroke-width="1.7"/><path d="M12 17.5C13.3807 17.5 14.5 16.3807 14.5 15C14.5 13.5 12 10.5 12 10.5C12 10.5 9.5 13.5 9.5 15C9.5 16.3807 10.6193 17.5 12 17.5Z" fill="#FFA552"/></svg>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-white">Wärmepumpen</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed">Effiziente, förderfähige Wärmepumpen-Systeme — von der Bedarfsanalyse über die Installation bis zur Inbetriebnahme.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card reveal">
+        <div class="icon-tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="9" rx="1.5" stroke="#FFA552" stroke-width="1.7"/><path d="M7 10V7.5C7 5.567 8.567 4 10.5 4H13.5C15.433 4 17 5.567 17 7.5V10" stroke="#FFA552" stroke-width="1.7"/><circle cx="9" cy="14.5" r="1.2" fill="#FFA552"/></svg>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-white">Badsanierung</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed">Komplettsanierung oder Teilumbau Ihres Badezimmers — modern geplant, fachgerecht umgesetzt, termintreu.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card reveal">
+        <div class="icon-tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="11" rx="2" stroke="#FFA552" stroke-width="1.7"/><path d="M8 20H16M12 16V20" stroke="#FFA552" stroke-width="1.7" stroke-linecap="round"/><path d="M7 9L9 11L7 13" stroke="#FFA552" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 9H17" stroke="#FFA552" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-white">Klimaanlagen</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed">Klimaanlage in Salzgitter installieren lassen — angenehme Raumtemperatur für Wohn- und Gewerberäume, ganzjährig.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card reveal">
+        <div class="icon-tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#FFA552" stroke-width="1.7"/><path d="M12 7.5V12L15 14" stroke="#FFA552" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-white">Heizungswartung</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed">Regelmäßige Wartung sorgt für volle Leistung, niedrigeren Verbrauch und eine lange Lebensdauer Ihrer Anlage.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card reveal">
+        <div class="icon-tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 19H21" stroke="#FFA552" stroke-width="1.7" stroke-linecap="round"/><path d="M5 19V8L12 3L19 8V19" stroke="#FFA552" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 19V13H16V19" stroke="#FFA552" stroke-width="1.5"/><path d="M3 19H21" stroke="#FFA552" stroke-width="3" stroke-linecap="round" opacity="0.25"/></svg>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-white">Fußbodenheizung</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed">Fußbodenheizung fachgerecht verlegen — für gleichmäßige Wärme und mehr Wohnkomfort in jedem Raum.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card reveal">
+        <div class="icon-tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 12H8L10 6L14 18L16 12H20" stroke="#FFA552" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-white">Heizungsanlagen &amp; HVAC</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed">Installation kompletter Heizungsanlagen und HVAC-Systeme — passgenau geplant für Neubau und Sanierung.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== WARUM WIR ====== -->
+<section id="warum-wir" class="py-28 lg:py-36 bg-ink2/50 border-y border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <span class="text-ember2 font-bold text-sm uppercase tracking-widest">Warum SHK Cakal</span>
+      <h2 class="mt-4 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+        Persönliches Handwerk statt anonymer Großbaustelle.
+      </h2>
+      <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+        Als Meisterbetrieb aus Salzgitter kennen wir die Region und ihre Häuser. Sie haben einen festen Ansprechpartner —
+        von der ersten Beratung bis zur Wartung Jahre später.
+      </p>
+
+      <div class="mt-10 space-y-6">
+        <div class="flex gap-4">
+          <div class="num-badge">01</div>
+          <div>
+            <h4 class="font-display font-bold text-white text-lg">Meisterqualität</h4>
+            <p class="text-slate-400 mt-1">Fachgerechte Ausführung nach aktuellem Stand der Technik — keine Kompromisse.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="num-badge">02</div>
+          <div>
+            <h4 class="font-display font-bold text-white text-lg">Regional &amp; persönlich</h4>
+            <p class="text-slate-400 mt-1">Salzgitter ist unsere Heimat — kurze Wege, schnelle Termine, direkter Kontakt.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="num-badge">03</div>
+          <div>
+            <h4 class="font-display font-bold text-white text-lg">Zuverlässig planbar</h4>
+            <p class="text-slate-400 mt-1">Klare Absprachen, transparente Kosten, eingehaltene Termine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal relative">
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-ink2 to-ink p-10 lg:p-14 shadow-glow">
+        <div class="grid grid-cols-2 gap-6">
+          <div class="stat-tile">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 6 9.5 6 14.5C6 17.8137 8.68629 20.5 12 20.5C15.3137 20.5 18 17.8137 18 14.5C18 9.5 12 2 12 2Z" stroke="#5FD3D3" stroke-width="1.7"/></svg>
+            <p class="mt-4 font-display font-bold text-white">Wärmepumpen</p>
+            <p class="text-sm text-slate-400 mt-1">Zukunftssichere Heiztechnik</p>
+          </div>
+          <div class="stat-tile">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="9" rx="1.5" stroke="#5FD3D3" stroke-width="1.7"/><path d="M7 10V7.5C7 5.567 8.567 4 10.5 4H13.5C15.433 4 17 5.567 17 7.5V10" stroke="#5FD3D3" stroke-width="1.7"/></svg>
+            <p class="mt-4 font-display font-bold text-white">Badsanierung</p>
+            <p class="text-sm text-slate-400 mt-1">Komplett aus einer Hand</p>
+          </div>
+          <div class="stat-tile">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="11" rx="2" stroke="#5FD3D3" stroke-width="1.7"/><path d="M8 20H16M12 16V20" stroke="#5FD3D3" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <p class="mt-4 font-display font-bold text-white">Klimatechnik</p>
+            <p class="text-sm text-slate-400 mt-1">Kühlung für jeden Raum</p>
+          </div>
+          <div class="stat-tile">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#5FD3D3" stroke-width="1.7"/><path d="M12 7.5V12L15 14" stroke="#5FD3D3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="mt-4 font-display font-bold text-white">Wartung</p>
+            <p class="text-sm text-slate-400 mt-1">Planbar &amp; zuverlässig</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABLAUF ====== -->
+<section id="ablauf" class="py-28 lg:py-36">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl reveal">
+      <span class="text-ember2 font-bold text-sm uppercase tracking-widest">Ablauf</span>
+      <h2 class="mt-4 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+        In vier Schritten zum fertigen Projekt.
+      </h2>
+    </div>
+
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-3xl overflow-hidden reveal">
+      <div class="step-tile">
+        <span class="font-display text-ember2 font-extrabold text-3xl">1</span>
+        <h4 class="mt-4 font-display font-bold text-white text-lg">Beratung</h4>
+        <p class="mt-2 text-sm text-slate-400">Kostenloses Erstgespräch — vor Ort oder telefonisch.</p>
+      </div>
+      <div class="step-tile">
+        <span class="font-display text-ember2 font-extrabold text-3xl">2</span>
+        <h4 class="mt-4 font-display font-bold text-white text-lg">Planung</h4>
+        <p class="mt-2 text-sm text-slate-400">Individuelles Konzept inkl. transparentem Festpreis.</p>
+      </div>
+      <div class="step-tile">
+        <span class="font-display text-ember2 font-extrabold text-3xl">3</span>
+        <h4 class="mt-4 font-display font-bold text-white text-lg">Umsetzung</h4>
+        <p class="mt-2 text-sm text-slate-400">Saubere, termingerechte Installation durch Meisterhand.</p>
+      </div>
+      <div class="step-tile">
+        <span class="font-display text-ember2 font-extrabold text-3xl">4</span>
+        <h4 class="mt-4 font-display font-bold text-white text-lg">Wartung</h4>
+        <p class="mt-2 text-sm text-slate-400">Regelmäßige Pflege für volle Leistung über Jahre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal relative overflow-hidden rounded-3xl bg-gradient-to-br from-ember to-amber-500 px-8 py-14 lg:px-16 lg:py-20 text-center">
+      <div class="absolute inset-0 hero-grid opacity-20"></div>
+      <h2 class="relative font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+        Bereit für Ihr Projekt?
+      </h2>
+      <p class="relative mt-4 text-white/90 text-lg max-w-xl mx-auto">
+        Rufen Sie uns an oder schreiben Sie uns — wir melden uns persönlich zurück.
+      </p>
+      <div class="relative mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+4917621986283" class="rounded-full bg-ink px-8 py-4 font-bold text-white hover:bg-ink2 transition-colors">0176 21986283 anrufen</a>
+        <a href="mailto:info@shk-cakal.de" class="rounded-full bg-white px-8 py-4 font-bold text-ink hover:bg-white/90 transition-colors">E-Mail schreiben</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== KONTAKT ====== -->
+<section id="kontakt" class="py-28 lg:py-36 bg-ink2/50 border-y border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
+    <div class="reveal">
+      <span class="text-ember2 font-bold text-sm uppercase tracking-widest">Kontakt</span>
+      <h2 class="mt-4 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+        Sprechen wir über Ihr Projekt.
+      </h2>
+      <p class="mt-6 text-slate-400 text-lg leading-relaxed max-w-md">
+        SHK Cakal ist für Sie in Salzgitter und Umgebung im Einsatz. Melden Sie sich — wir beraten Sie persönlich und unverbindlich.
+      </p>
+
+      <div class="mt-10 space-y-5">
+        <a href="tel:+4917621986283" class="flex items-center gap-4 group">
+          <span class="icon-tile !mt-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.4 16.1 21.4 16.7V20.3C21.4 20.9 20.9 21.4 20.3 21.4C10.4 21.4 2.6 13.6 2.6 3.7C2.6 3.1 3.1 2.6 3.7 2.6H7.3C7.9 2.6 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z" stroke="#FFA552" stroke-width="1.6"/></svg></span>
+          <span class="text-lg font-semibold text-slate-200 group-hover:text-white transition-colors">0176 21986283</span>
+        </a>
+        <a href="mailto:info@shk-cakal.de" class="flex items-center gap-4 group">
+          <span class="icon-tile !mt-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#FFA552" stroke-width="1.6"/><path d="M4 7L12 13L20 7" stroke="#FFA552" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="text-lg font-semibold text-slate-200 group-hover:text-white transition-colors">info@shk-cakal.de</span>
+        </a>
+        <div class="flex items-center gap-4">
+          <span class="icon-tile !mt-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.36 15.64 2 11.5 2C7.36 2 4 5.36 4 9.5C4 14.5 11 21 12 21Z" stroke="#FFA552" stroke-width="1.6"/><circle cx="11.5" cy="9.5" r="2.5" stroke="#FFA552" stroke-width="1.6"/></svg></span>
+          <span class="text-lg font-semibold text-slate-200">Salzgitter &amp; Umgebung</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form action="mailto:info@shk-cakal.de" method="post" enctype="text/plain" class="rounded-3xl border border-white/10 bg-ink2/60 p-8 lg:p-10 space-y-5">
+        <div>
+          <label class="text-sm font-semibold text-slate-300">Name</label>
+          <input type="text" name="Name" required class="form-input" placeholder="Ihr Name">
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="text-sm font-semibold text-slate-300">Telefon</label>
+            <input type="tel" name="Telefon" class="form-input" placeholder="Optional">
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-slate-300">E-Mail</label>
+            <input type="email" name="Email" required class="form-input" placeholder="ihre@email.de">
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-slate-300">Ihr Anliegen</label>
+          <textarea name="Nachricht" rows="4" required class="form-input resize-none" placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea>
+        </div>
+        <button type="submit" class="w-full rounded-full bg-ember px-6 py-4 font-bold text-white hover:bg-ember2 transition-colors">
+          Anfrage senden
+        </button>
+        <p class="text-xs text-slate-500 text-center">Öffnet Ihr E-Mail-Programm mit den ausgefüllten Daten an info@shk-cakal.de.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="py-14 bg-ink">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-white/10">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-ember to-ember2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 6 9.5 6 14.5C6 17.8137 8.68629 20.5 12 20.5C15.3137 20.5 18 17.8137 18 14.5C18 9.5 12 2 12 2Z" stroke="white" stroke-width="1.7"/></svg>
+        </span>
+        <span class="font-display font-extrabold text-white">SHK <span class="text-ember2">Cakal</span></span>
+      </a>
+      <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-400">
+        <a href="#leistungen" class="hover:text-white transition-colors">Leistungen</a>
+        <a href="#warum-wir" class="hover:text-white transition-colors">Über uns</a>
+        <a href="#kontakt" class="hover:text-white transition-colors">Kontakt</a>
+        <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+      </nav>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© <span id="year"></span> SHK Cakal — Meisterbetrieb für Heizung, Sanitär &amp; Klima.</p>
+      <p>Salzgitter &amp; Umgebung</p>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+4917621986283" class="lg:hidden fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-ember px-5 py-3.5 font-bold text-white shadow-glow">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.4 16.1 21.4 16.7V20.3C21.4 20.9 20.9 21.4 20.3 21.4C10.4 21.4 2.6 13.6 2.6 3.7C2.6 3.1 3.1 2.6 3.7 2.6H7.3C7.9 2.6 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z" stroke="white" stroke-width="1.6"/></svg>
+  Anrufen
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

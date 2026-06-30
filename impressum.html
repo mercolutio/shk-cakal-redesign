@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum — SHK Cakal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B1220', ink2: '#101a2c', ember: '#FF6A2B', ember2: '#FFA552', frost: '#5FD3D3' },
+        fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Manrope', 'sans-serif'] },
+      },
+    },
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-ink text-slate-100 font-sans antialiased">
+
+<header class="border-b border-white/10">
+  <div class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="index.html" class="font-display font-extrabold text-lg text-white">SHK <span class="text-ember2">Cakal</span></a>
+    <a href="index.html" class="text-sm text-slate-400 hover:text-white transition-colors">&larr; Zurück zur Startseite</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-20">
+  <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Impressum</h1>
+
+  <div class="mt-10 space-y-8 text-slate-300 leading-relaxed">
+    <section>
+      <h2 class="font-display font-bold text-xl text-white mb-2">Angaben gemäß § 5 TMG</h2>
+      <p>SHK Cakal — Meisterbetrieb für Heizung, Sanitär &amp; Klima</p>
+      <p class="text-slate-400">Vollständige Firmenanschrift: Angaben folgen.</p>
+    </section>
+
+    <section>
+      <h2 class="font-display font-bold text-xl text-white mb-2">Kontakt</h2>
+      <p>Telefon: <a href="tel:+4917621986283" class="text-ember2 hover:underline">0176 21986283</a></p>
+      <p>E-Mail: <a href="mailto:info@shk-cakal.de" class="text-ember2 hover:underline">info@shk-cakal.de</a></p>
+    </section>
+
+    <section>
+      <h2 class="font-display font-bold text-xl text-white mb-2">Berufsbezeichnung</h2>
+      <p>Meisterbetrieb für Sanitär-, Heizungs- und Klimatechnik (SHK), Deutschland.</p>
+      <p class="text-slate-400">Zuständige Handwerkskammer und Eintragungsnummer: Angaben folgen.</p>
+    </section>
+
+    <section>
+      <h2 class="font-display font-bold text-xl text-white mb-2">Umsatzsteuer-ID</h2>
+      <p class="text-slate-400">Umsatzsteuer-Identifikationsnummer gemäß §27a UStG: Angaben folgen.</p>
+    </section>
+
+    <section>
+      <h2 class="font-display font-bold text-xl text-white mb-2">Verantwortlich für den Inhalt</h2>
+      <p class="text-slate-400">Verantwortlich nach § 18 Abs. 2 MStV: Angaben folgen.</p>
+    </section>
+
+    <section class="rounded-2xl border border-white/10 bg-ink2/60 p-6 text-sm text-slate-400">
+      Hinweis: Diese Seite ist ein Website-Redesign-Entwurf. Die vollständigen, rechtlich erforderlichen Pflichtangaben
+      (Firmenanschrift, Handwerkskammer, USt-ID etc.) müssen vor Live-Schaltung der finalen Domain ergänzt werden.
+    </section>
+  </div>
+</main>
+
+<footer class="py-10 border-t border-white/10 text-center text-sm text-slate-500">
+  © <span id="year"></span> SHK Cakal
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

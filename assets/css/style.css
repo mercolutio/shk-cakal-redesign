@@ -1,0 +1,135 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B1220;
+}
+
+/* subtle grid backdrop used in hero + cta */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/* header scroll state */
+#site-header.scrolled {
+  background-color: rgba(11, 18, 32, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.mobile-link {
+  color: #cbd5e1;
+  padding: 0.25rem 0;
+}
+
+/* service cards */
+.service-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 165, 82, 0.35);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+}
+
+.icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 106, 43, 0.12);
+  border: 1px solid rgba(255, 165, 82, 0.25);
+}
+
+.num-badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  background: rgba(95, 211, 211, 0.1);
+  border: 1px solid rgba(95, 211, 211, 0.25);
+  color: #5FD3D3;
+  font-weight: 800;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+}
+
+.stat-tile {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.stat-tile:hover {
+  border-color: rgba(95, 211, 211, 0.35);
+  transform: translateY(-4px);
+}
+
+.step-tile {
+  background-color: #0B1220;
+  padding: 2.25rem 1.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.step-tile:hover {
+  background-color: #101a2c;
+}
+
+.form-input {
+  width: 100%;
+  margin-top: 0.4rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #f1f5f9;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.form-input::placeholder {
+  color: #64748b;
+}
+
+.form-input:focus {
+  border-color: #FF6A2B;
+  background: rgba(255,255,255,0.06);
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
